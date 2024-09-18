@@ -5,7 +5,7 @@ const typeDefs = `
         breed: String
         age: String
         size: String
-        names: String
+        name: String
         description: String
         gender: String
         location: String

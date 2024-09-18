@@ -32,7 +32,7 @@ app.get('/', (req,res) => {
 db.once('open', () => {
     app.listen(port, () => {
         console.log('Server is running at http://localhost:3000');
-        console.log('Use GraphQL at http://localhost:${PORT}/graphql);
+        console.log('Use GraphQL at http://localhost:${PORT}/graphql');
         });
     });
 };
