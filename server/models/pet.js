@@ -1,13 +1,12 @@
-const { schema, model } = reqiured('mongoose');
+const { Schema} = reqiured('mongoose');
 
-const petSchema = new schema(
+const petSchema = new Schema(
     {
         species: {
             type:String
         },
         breed: {
-            type:String,
-            id:Number
+            type:String
         },
         age: {
             type: Number,
@@ -15,13 +14,12 @@ const petSchema = new schema(
         size: {
             type:String
         },
-        names: {
+        name: {
             type: String,
-            reqiured: true,
+            required: true,
         },
         description: {
             type: String,
-            reqiured: true,
             minimum:0,
             maximum:100,
         },
@@ -29,18 +27,18 @@ const petSchema = new schema(
             type:String
         },
         Location:{
-            type:Number,
+            type:String,
+            required:true
         },
         image:{
-         type:
+         type:String
         },
         adoptionstatus:{
-
-        }
+            type:String,
+            required:true
+        },
 
     }
 )
 
-const Pet = model('Pet',petSchema);
-
-module.exports = Pet;
+module.exports = petSchema;
