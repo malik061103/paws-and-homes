@@ -31,7 +31,7 @@ const typeDefs = `
     
     type Mutation {
        addPet(species: String!, breed: String!): Pet
-       removePet(petId:ID!):Pet 
+       removePet(petId:ID!): Pet 
     }
-    `;
+ `;
 module.exports = typeDefs;

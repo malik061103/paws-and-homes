@@ -1,22 +1,22 @@
-const { Pet } = require('../models');
+const { petSchema } = require('../models');
 
 const resolvers = {
     Query: {
         pets: async () => {
-            return Pet.find();
+            return petSchema.find();
         },
 
         pet: async(parent, { petId }) => {
-            return Pet.findOne({ _id: petId });
+            return petSchema.findOne({ _id: petId });
         },
     },
 
     Mutation: {
         addPet: async (parent, { species, breed }) => {
-            return Pet.create({ species, breed });
+            return petSchema.create({ species, breed });
         },
         removePet: async (parent, { petId }) => {
-            return Pet.findOneAndDelete({ _id: petId });
+            return petSchema.findOneAndDelete({ _id: petId });
         },
 
     },
