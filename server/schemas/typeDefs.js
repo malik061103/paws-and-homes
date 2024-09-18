@@ -17,7 +17,7 @@ const typeDefs = `
         _id: ID
         firstName: String
         lastName: String
-        phoneNumber: 
+        phoneNumber: String
         email: String
         description: String
         applicationStatus: String
