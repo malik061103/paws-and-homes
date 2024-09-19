@@ -7,7 +7,6 @@ const applicationSchema = new Schema(
         firstName: {
             type: String,
             required: true,
-
         },
         lastName: {
             type: String,
@@ -24,8 +23,8 @@ const applicationSchema = new Schema(
         },
         description: {
             type: String,
-            minlenght: 0,
-            maxlenght: 100,
+            minlength: 0,
+            maxlength: 100,
         },
         applicantionStatus: {
             type: String,
