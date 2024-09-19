@@ -3,7 +3,7 @@ const typeDefs = `
         _id: ID
         species: String
         breed: String
-        age: String
+        age: Int
         size: String
         name: String
         description: String
@@ -30,9 +30,9 @@ const typeDefs = `
     }
     
     type Mutation {
-       addPet(species: String!, breed: String!,age: Number,size:String,name: String!,description: String,gender:String,location:String!,image:String,adoptionStatus: String!): Pet
+       addPet(species: String!, breed: String!,age: Int,size:String,name: String!,description: String,gender:String,location:String!,image:String,adoptionStatus: String!): Pet
        removePet(petId:ID!): Pet 
-       updatePet(petId:ID!, species: String, breed: String,age: Number,size:String,name: String,description: String,gender:String,location:String,image:String,adoptionStatus: String):Pet
+       updatePet(petId:ID!, species: String, breed: String,age: Int,size:String,name: String,description: String,gender:String,location:String,image:String,adoptionStatus: String):Pet
     }
  `;
 module.exports = typeDefs;
