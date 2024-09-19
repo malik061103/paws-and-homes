@@ -1,5 +1,3 @@
-const Pet = require("./Pet");
-
 const { Schema,model } = required('mongoose');
 
 const applicationSchema = new Schema(
