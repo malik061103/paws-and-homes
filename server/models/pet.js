@@ -3,27 +3,16 @@ const { Schema,model} = required('mongoose');
 const petSchema = new Schema(
     {
         species: {
-<<<<<<< HEAD
-            type:String
-        },
-        breed: {
-            type:String
-=======
             type:String,
         },
         breed: {
             type:String,
->>>>>>> c5867d95ea688cc8a668a4ab0dbc37eafe9c6474
         },
         age: {
             type: Number,
         },
         size: {
-<<<<<<< HEAD
-            type:String
-=======
             type:String,
->>>>>>> c5867d95ea688cc8a668a4ab0dbc37eafe9c6474
         },
         name: {
             type: String,
