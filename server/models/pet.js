@@ -39,7 +39,6 @@ const petSchema = new Schema(
         },
 
     },
->>>>>>> c5867d95ea688cc8a668a4ab0dbc37eafe9c6474
 )
 const Pet = model("Pet",petSchema)
 
