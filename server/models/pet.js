@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const { Schema} = reqiured('mongoose');
-=======
-const { Schema } = require('mongoose');
->>>>>>> c5867d95ea688cc8a668a4ab0dbc37eafe9c6474
+const { Schema,model} = required('mongoose');
 
 const petSchema = new Schema(
     {
@@ -35,28 +31,11 @@ const petSchema = new Schema(
         },
         description: {
             type: String,
-            minimum:0,
-            maximum:100,
+            minlength:0,
+            maxlength:100,
         },
         gender:{
-<<<<<<< HEAD
             type:String
-        },
-        Location:{
-            type:String,
-            required:true
-        },
-        image:{
-         type:String
-        },
-        adoptionstatus:{
-            type:String,
-            required:true
-        },
-
-    }
-=======
-            type:String,
         },
         location:{
             type:String,
@@ -73,5 +52,6 @@ const petSchema = new Schema(
     },
 >>>>>>> c5867d95ea688cc8a668a4ab0dbc37eafe9c6474
 )
+const Pet = model("Pet",petSchema)
 
-module.exports = petSchema;
+module.exports = Pet;
