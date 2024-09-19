@@ -1,6 +1,8 @@
-const { Schema } = reqiured('mongoose');
+const Pet = require("./Pet");
 
-const applicantionSchema = new Schema(
+const { Schema,model } = required('mongoose');
+
+const applicationSchema = new Schema(
     {
         firstName: {
             type: String,
@@ -11,7 +13,7 @@ const applicantionSchema = new Schema(
             type: String,
             required: true
         },
-        phoneNummber: {
+        phoneNumber: {
             type: Number,
             required: true
         },
@@ -22,18 +24,20 @@ const applicantionSchema = new Schema(
         },
         description: {
             type: String,
-            minimum: 0,
-            maximum: 100,
+            minlenght: 0,
+            maxlenght: 100,
         },
         applicantionStatus: {
             type: String,
             required: true
         },
         pet: {
-            type: String,
-
-        }
+            type: Schema.types.ObjectId,
+            ref:"Pet",
+            required:true
+        },
     }
 )
+const Application = model("Application",applicationSchema)
 
-module.exports = applicantionSchema;
+module.exports = Application;

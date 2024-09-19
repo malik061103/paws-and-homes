@@ -1,4 +1,4 @@
-const { Schema} = reqiured('mongoose');
+const { Schema,model} = required('mongoose');
 
 const petSchema = new Schema(
     {
@@ -20,25 +20,27 @@ const petSchema = new Schema(
         },
         description: {
             type: String,
-            minimum:0,
-            maximum:100,
+            minlength:0,
+            maxlength:100,
         },
         gender:{
             type:String
         },
-        Location:{
+        location:{
             type:String,
             required:true
         },
         image:{
          type:String
         },
-        adoptionstatus:{
+        adoptionStatus:{
             type:String,
             required:true
         },
 
+
     }
 )
+const Pet = model("Pet",petSchema)
 
-module.exports = petSchema;
+module.exports = Pet;
