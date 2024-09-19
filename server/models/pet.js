@@ -4,9 +4,11 @@ const petSchema = new Schema(
     {
         species: {
             type:String,
+            required:true
         },
         breed: {
             type:String,
+            required:true
         },
         age: {
             type: Number,
