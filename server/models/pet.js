@@ -1,18 +1,18 @@
-const { Schema} = reqiured('mongoose');
+const { Schema } = require('mongoose');
 
 const petSchema = new Schema(
     {
         species: {
-            type:String
+            type:String,
         },
         breed: {
-            type:String
+            type:String,
         },
         age: {
             type: Number,
         },
         size: {
-            type:String
+            type:String,
         },
         name: {
             type: String,
@@ -24,21 +24,21 @@ const petSchema = new Schema(
             maximum:100,
         },
         gender:{
-            type:String
-        },
-        Location:{
             type:String,
-            required:true
+        },
+        location:{
+            type:String,
+            required:true,
         },
         image:{
-         type:String
+         type:String,
         },
-        adoptionstatus:{
+        adoptionStatus:{
             type:String,
-            required:true
+            required:true,
         },
 
-    }
+    },
 )
 
 module.exports = petSchema;

@@ -1,27 +1,27 @@
-const { Schema } = reqiured('mongoose');
+const { Schema } = require('mongoose');
 
-const applicantionSchema = new Schema(
+const applicationSchema = new Schema(
     {
     firstName:{
-        type:String,
-        reqiured:true,
+        type: String,
+        required: true,
         
     },
     lastName:{
-        type:String,
-        reqiured:true
+        type: String,
+        required: true
     },
-    phoneNummber:{
-        type:Number,
-        reqiured:true
+    phoneNumber:{
+        type: Number,
+        required: true
     },
     email:{
-        type:String,
-        reqiured:true,
-        unique:true
+        type: String,
+        required: true,
+        unique: true
     },
 
-    }
+    },
 )
 
-module.exports = applicantionSchema;
+module.exports = applicationSchema;
