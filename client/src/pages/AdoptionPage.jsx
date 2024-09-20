@@ -1,5 +1,3 @@
-
-
 const AdoptionPage = () => {
   return (
     <div>AdoptionPage</div>
