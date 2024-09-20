@@ -1,6 +1,6 @@
-const Pet = require("./Pet");
 
-const { Schema,model } = required('mongoose');
+
+const { Schema,model } = require('mongoose');
 
 const applicationSchema = new Schema(
     {
@@ -31,7 +31,7 @@ const applicationSchema = new Schema(
             required: true
         },
         pet: {
-            type: Schema.types.ObjectId,
+            type: Schema.Types.ObjectId,
             ref:"Pet",
             required:true
         },
@@ -39,4 +39,4 @@ const applicationSchema = new Schema(
 )
 const Application = model("Application",applicationSchema)
 
-module.exports = applicationSchema;
+module.exports = Application;

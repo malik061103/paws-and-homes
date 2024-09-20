@@ -1,12 +1,14 @@
-const { Schema,model} = required('mongoose');
+const { Schema,model} = require('mongoose');
 
 const petSchema = new Schema(
     {
         species: {
             type:String,
+            required:true
         },
         breed: {
             type:String,
+            required:true
         },
         age: {
             type: Number,
