@@ -1,6 +1,10 @@
+import Miau from "../components/Miau"
+
 const CatPage = () => {
   return (
-    <div>CatPage</div>
+    <>
+      <Miau/>
+      </>
   )
 }
 
