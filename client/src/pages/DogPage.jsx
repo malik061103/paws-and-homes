@@ -1,8 +1,10 @@
-import React from 'react'
+import Ruff from "../components/Ruff";
 
 const DogPage = () => {
   return (
-    <div>DogPage</div>
+    <>
+    <Ruff/>
+    </>
   )
 }
 

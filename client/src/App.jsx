@@ -7,6 +7,8 @@ import {
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import DogPage from './pages/DogPage';
+import CatPage from './pages/CatPage';
+import AdoptionPage from './pages/AdoptionPage';
 // import CatPage from './pages/CatPage';
 // import AdoptionPage from './pages/AdoptionPage';
 
@@ -15,6 +17,8 @@ const router = createBrowserRouter (
   <Route path='/' element={<MainLayout />}>
     <Route index element={ <HomePage />} />
     <Route path='/dogs' element={ <DogPage />} />
+    <Route path='/cats' element={ <CatPage />} />
+    <Route path='/adoption' element={ <AdoptionPage />} />
     {/* <Route path='/Cat' element={ <CatPage />} />
     <Route path='/Adoption' element={ <AdoptionPage />} /> */}
   </Route>
