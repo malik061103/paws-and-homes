@@ -1,8 +1,4 @@
 
-const { Schema,model } = required('mongoose');
-
-
-
 const { Schema,model } = require('mongoose');
 
 
