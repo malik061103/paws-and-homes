@@ -13,7 +13,7 @@ const typeDefs = `
         adoptionStatus: String
     }   
     
-    type adoptionApp {
+    type Application {
         _id: ID
         firstName: String
         lastName: String
@@ -33,6 +33,7 @@ const typeDefs = `
        addPet(species: String!, breed: String!,age: Int,size:String,name: String!,description: String,gender:String,location:String!,image:String,adoptionStatus: String!): Pet
        removePet(petId:ID!): Pet 
        updatePet(petId:ID!, species: String, breed: String,age: Int,size:String,name: String,description: String,gender:String,location:String,image:String,adoptionStatus: String):Pet
-    }
+       addAplication(firstName:String!,lastName:String!,phoneNumber:Int!,email:String,description:String!,applicationStatus:String!,pet:Schema.Types.ObjectId!):Application
+       }
  `;
 module.exports = typeDefs;
