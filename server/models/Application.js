@@ -1,6 +1,6 @@
 
-
 const { Schema,model } = require('mongoose');
+
 
 const applicationSchema = new Schema(
     {
