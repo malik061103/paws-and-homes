@@ -1,8 +1,10 @@
-
+import Adopt from "../components/Adopt"
 
 const AdoptionPage = () => {
   return (
-    <div>AdoptionPage</div>
+    <>
+      <Adopt/>
+    </>
   )
 }
 
