@@ -1,4 +1,6 @@
 
+import images from '../components/Cat'
+
 import React from 'react'
 import images from "../components/Cat"
 import Miau from "../components/Miau"
