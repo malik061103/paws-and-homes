@@ -10,14 +10,11 @@ const CatPage = () => {
 
   return (
 
-
+<>
     <div>Cat Page</div>
-
-
-    <>
       <Miau/>
-      </>
-
+   
+</>
   )
 }
 

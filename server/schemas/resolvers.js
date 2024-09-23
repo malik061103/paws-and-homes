@@ -10,7 +10,7 @@ const resolvers = {
         pet: async (parent, { petId }) => {
             return petSchema.findOne({ _id: petId });
         },
-        application: async () => {
+        applications: async () => {
             return applicationSchema.find();
         },
 
@@ -32,8 +32,8 @@ const resolvers = {
             )
             return updatedPet
         },
-        addApplication :async(parent,{firstName,lastName,phoneNumber,email,description,applicationStatus,Pet})=>{
-            return applicationSchema.create({firstName,lastName,phoneNumber,email,description,applicationStatus,Pet})
+        addApplication :async(parent,{firstName,lastName,phoneNumber,email,description,applicationStatus, pet})=>{
+            return applicationSchema.create({firstName,lastName,phoneNumber,email,description,applicationStatus, pet})
         },
     },
 
