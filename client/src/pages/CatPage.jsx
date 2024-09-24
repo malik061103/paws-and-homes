@@ -4,8 +4,8 @@
 import Miau from "../components/Miau"
 
 
-const CatPage = () => {
 
+const CatPage = () => {
   return (
     <>
       <Miau/>
