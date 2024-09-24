@@ -26,7 +26,7 @@ const applicationSchema = new Schema(
             minlength: 0,
             maxlength: 100,
         },
-        applicantionStatus: {
+        applicationStatus: {
             type: String,
             required: true
         },
