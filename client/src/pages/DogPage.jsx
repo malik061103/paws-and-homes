@@ -1,9 +1,11 @@
-import React from 'react'
+import react from 'react'
 
 const DogPage = () => {
   return (
-    <div>DogPage</div>
-  )
-}
+    <div>
+     < DogPage />
+      </div>
+  );
+};
 
 export default DogPage
