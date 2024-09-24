@@ -9,8 +9,11 @@ import HomePage from './pages/HomePage';
 import DogPage from './pages/DogPage';
 import CatPage from './pages/CatPage';
 import AdoptionPage from './pages/AdoptionPage';
+<<<<<<< HEAD
+=======
 // import CatPage from './pages/CatPage';
 // import AdoptionPage from './pages/AdoptionPage';
+>>>>>>> 24c9505ba7a343097edc26e3da8c12de1ae9d39a
 
 const router = createBrowserRouter (
   createRoutesFromElements (
@@ -19,8 +22,11 @@ const router = createBrowserRouter (
     <Route path='/dogs' element={ <DogPage />} />
     <Route path='/cats' element={ <CatPage />} />
     <Route path='/adoption' element={ <AdoptionPage />} />
+<<<<<<< HEAD
+=======
     {/* <Route path='/Cat' element={ <CatPage />} />
     <Route path='/Adoption' element={ <AdoptionPage />} /> */}
+>>>>>>> 24c9505ba7a343097edc26e3da8c12de1ae9d39a
   </Route>
   )
 );
