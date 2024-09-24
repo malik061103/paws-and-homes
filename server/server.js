@@ -27,6 +27,13 @@ app.get('/', (req,res) => {
 
 
 app.use('/graphql', expressMiddleware(server));
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/dist')));
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    });
+  }
 // Start the server
 db.once('open', () => {
     app.listen(PORT, () => {
