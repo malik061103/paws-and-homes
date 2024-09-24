@@ -21,9 +21,6 @@ const startApolloServer = async () => {
     app.use(express.json());
 
 // Define a route 
-app.get('/', (req,res) => {
-    res.send('Hello World!');
-});
 
 
 app.use('/graphql', expressMiddleware(server));
