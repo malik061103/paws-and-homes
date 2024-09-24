@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Cat from './components/CatPage.jsx';
-import Dog from './components/DogPage.jsx';
+import Cat from './pages/CatPage.jsx';
+import Dog from './pages/DogPage.jsx';
 import Home from './pages/HomePage.jsx';
 import Adoption from './pages/AdoptionPage.jsx';
 import App from './App.jsx'
