@@ -83,6 +83,19 @@ const Adopt = ({ Adopt }) => {
                 onChange={(e) => setContactEmail(e.target.value)}
                 />
             </div>
+            <div className="mb-4">
+              <label htmlFor="pet_id" className="block text-gray-700 font-bold mb-2">Pet ID</label>
+              <input
+                type="id"
+                id="pet_id"
+                name="pet_id"
+                className="border rounded w-full py-2 px-3"
+                placeholder="Desired Pet ID"
+                required
+                value={contactEmail}
+                onChange={(e) => setContactEmail(e.target.value)}
+                />
+            </div>
 
             <div className="mb-4">
               <label htmlFor="type" className="block text-gray-700 font-bold mb-2">Animal Type</label>

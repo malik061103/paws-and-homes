@@ -1,54 +1,54 @@
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-import { View, Image } from 'react-native';
+// import { View, Image } from 'react-native';
 
-  const images = () => {
+//   const images = () => {
 
 
-    return (
-        function App() {
+//     return (
+//         function App() {
 
-            const [searchTerm, setSearchTerm]
+//             const [searchTerm, setSearchTerm]
 
-            const handleSearchChange = (event) => {
+//             const handleSearchChange = (event) => {
 
-                setSerchTerm(evet.target.value);
+//                 setSerchTerm(evet.target.value);
 
-            };
-            return (
+//             };
+//             return (
 
-                <div>
-                    <input
-                    type="text"
-                    placeholder= "Choose A Cat.."
-                    value={searchTerm}
-                    onChange={hadleSearchChange}
-                    />
-                </div>
-            );
-        }
+//                 <div>
+//                     <input
+//                     type="text"
+//                     placeholder= "Choose A Cat.."
+//                     value={searchTerm}
+//                     onChange={hadleSearchChange}
+//                     />
+//                 </div>
+//             );
+//         }
 
-        <view style={{flexDirection: 'column',justifyContent:'center', alignItems: 'right'}}>
-        <section className="py-3">
+//         <view style={{flexDirection: 'column',justifyContent:'center', alignItems: 'right'}}>
+//         <section className="py-3">
               
 
-              <img className='h-20 w-20' src={cat1}
-                alt='cat1'/> <br>
-                <p className= "text-base">Milly - 3yr - Female</p></br>
+//               <img className='h-20 w-20' src={cat1}
+//                 alt='cat1'/> <br>
+//                 <p className= "text-base">Milly - 3yr - Female</p></br>
 
-                <img className= 'h-20 w-20' src={cat2}
-                alt='cat2'/><br>
-                <p className= "text-base">Cheeto - 6yr - Male</p></br>
+//                 <img className= 'h-20 w-20' src={cat2}
+//                 alt='cat2'/><br>
+//                 <p className= "text-base">Cheeto - 6yr - Male</p></br>
 
-                <img className='h-20 w-20' src={cat3}
-                alt='cat2'/><br>
-                <p className= "text-base">Rosie - 10yr - Female</p></br>
+//                 <img className='h-20 w-20' src={cat3}
+//                 alt='cat2'/><br>
+//                 <p className= "text-base">Rosie - 10yr - Female</p></br>
    
-    )
+//     )
 
-  }
+//   }
 
-  export default App
+//   export default App
 
-  export default Cat
+//   export default Cat

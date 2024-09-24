@@ -1,7 +1,3 @@
-
-import Images from "../components/Dog"
-import React from 'react'
-
 import Ruff from "../components/Ruff";
 
 
