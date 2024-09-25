@@ -1,6 +1,6 @@
 
-const { Schema,model } = require('mongoose');
 
+const { Schema,model } = require('mongoose');
 
 const applicationSchema = new Schema(
     {
@@ -26,7 +26,7 @@ const applicationSchema = new Schema(
             minlength: 0,
             maxlength: 100,
         },
-        applicationStatus: {
+        applicantionStatus: {
             type: String,
             required: true
         },

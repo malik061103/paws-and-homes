@@ -1,5 +1,4 @@
-const { petSchema, applicationSchema } = require('../models');
-
+const { petSchema } = require('../models');
 
 const resolvers = {
     Query: {
@@ -10,18 +9,11 @@ const resolvers = {
         pet: async (parent, { petId }) => {
             return petSchema.findOne({ _id: petId });
         },
-        applications: async () => {
-            return applicationSchema.find();
-        },
-
-    application: async (parent, { applicationId }) => {
-            return applicationSchema.findOne({ _id: applicationId });
-        },
     },
 
     Mutation: {
-        addPet: async (parent, { petId ,species, breed, age, size, name, description, gender, location, image, adoptionStatus }) => {
-            return petSchema.create({ petId, species, breed, age, size, name, description, gender, location, image, adoptionStatus });
+        addPet: async (parent, { species, breed, age, size, name, description, gender, location, image, adoptionStatus }) => {
+            return petSchema.create({ species, breed, age, size, name, description, gender, location, image, adoptionStatus });
         },
         removePet: async (parent, { petId }) => {
             return petSchema.findOneAndDelete({ _id: petId });
@@ -31,10 +23,7 @@ const resolvers = {
                 {new:true}
             )
             return updatedPet
-        },
-        addApplication :async(parent,{firstName,lastName,phoneNumber,email,description,applicationStatus, pet})=>{
-            return applicationSchema.create({firstName,lastName,phoneNumber,email,description,applicationStatus, pet})
-        },
+        }
     },
 
 };
