@@ -1,6 +1,5 @@
 import Ruff from "../components/Ruff";
 
-
 const DogPage = () => {
   return (
     <>
