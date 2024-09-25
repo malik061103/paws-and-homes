@@ -21,12 +21,15 @@ const startApolloServer = async () => {
     app.use(express.json());
 
 // Define a route 
-app.get('/', (req,res) => {
-    res.send('Hello World!');
-});
 
 
 app.use('/graphql', expressMiddleware(server));
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/dist')));
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    });
+  }
 // Start the server
 db.once('open', () => {
     app.listen(port, () => {
