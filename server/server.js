@@ -5,7 +5,7 @@ const path = require('path');
 const { typeDefs, resolvers }= require('./schemas');
 const db = require('./config/connection');
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 
@@ -24,7 +24,6 @@ const startApolloServer = async () => {
 
 
 app.use('/graphql', expressMiddleware(server));
-
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/dist')));
     app.get('*', (req, res) => {
@@ -33,9 +32,9 @@ if (process.env.NODE_ENV === 'production') {
   }
 // Start the server
 db.once('open', () => {
-    app.listen(PORT, () => {
-        console.log(`Server is running at http://localhost:3000`);
-        console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+    app.listen(port, () => {
+        console.log('Server is running at http://localhost:3000');
+        console.log('Use GraphQL at http://localhost:${PORT}/graphql');
         });
     });
 };

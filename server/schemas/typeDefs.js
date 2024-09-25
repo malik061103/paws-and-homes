@@ -1,6 +1,6 @@
 const typeDefs = `
     type Pet {
-        _id: ID!
+        _id: ID
         species: String
         breed: String
         age: Int
@@ -13,31 +13,26 @@ const typeDefs = `
         adoptionStatus: String
     }   
     
-    type Application {
-        _id: ID!
+    type adoptionApp {
+        _id: ID
         firstName: String
         lastName: String
         phoneNumber: String
         email: String
         description: String
         applicationStatus: String
-        pet: Pet
+        pet: String
     }
     
     type Query {
-        pets: [Pet]
+        pets: [Pet]!
         pet(petId: ID!): Pet
-        applications:[Application]
-        application(applicationId:ID!):Application
     }
     
     type Mutation {
-       addPet(species: String!, breed: String!, age:Int, size: String, name: String!, description: String ,gender: String , location: String!, image: String, adoptionStatus: String!): Pet
+       addPet(species: String!, breed: String!,age: Int,size:String,name: String!,description: String,gender:String,location:String!,image:String,adoptionStatus: String!): Pet
        removePet(petId:ID!): Pet 
-
        updatePet(petId:ID!, species: String, breed: String,age: Int,size:String,name: String,description: String,gender:String,location:String,image:String,adoptionStatus: String):Pet
-
-       addApplication(firstName:String!,lastName:String!,phoneNumber:Int!,email:String,description:String!,applicationStatus:String!,pet:ID!):Application
-       }
+    }
  `;
 module.exports = typeDefs;

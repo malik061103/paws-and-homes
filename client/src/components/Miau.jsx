@@ -34,11 +34,11 @@ const Miau = () => {
 
     const catToEdit = cats[index];
 
+    setCatImage(catToEdit.image);
+
     setCatName(catToEdit.name);
 
     setCatInfo(catToEdit.info);
-
-    setCatImage(catToEdit.image);
 
     setIsAdoptable(catToEdit.isAdoptable);
 
@@ -47,11 +47,11 @@ const Miau = () => {
 
   const resetForm = () => {
 
+    setCatImage(null);
+
     setCatName('');
 
     setCatInfo('');
-
-    setCatImage(null);
 
     setIsAdoptable(false);
 
@@ -64,7 +64,7 @@ const Miau = () => {
 
       <div className='container-xl lg:container m-auto'>
 
-        <form onSubmit={handleSubmit} className='mb-4'>
+        <form onSubmit={handleSubmit} className='mb-3'>
 
           <input
             type="text"
@@ -72,7 +72,6 @@ const Miau = () => {
             value={catName}
             onChange={(e) => setCatName(e.target.value)}
             className='border rounded px-2 py-1 mr-2'
-            required
           />
           
           <input

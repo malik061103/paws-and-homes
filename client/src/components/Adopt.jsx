@@ -11,7 +11,7 @@ const Adopt = ({ Adopt }) => {
   const submitForm = (e) => {
     e.preventDefault();
 
-    const newJob = {
+    const newForm = {
       firstName,
       lastName,
       type,
@@ -19,7 +19,7 @@ const Adopt = ({ Adopt }) => {
       contactEmail,
       contactPhone,
     };
-    console.log(newJob);
+    console.log(newForm);
   };
 
     return (
@@ -27,7 +27,7 @@ const Adopt = ({ Adopt }) => {
       <div className="container m-auto max-w-2xl py-24">
         <div
           className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
-          <form>
+          <form onSubmit={submitForm}>
             <h2 className="text-3xl text-center font-semibold mb-6">Adoption Application</h2>
 
             <div className="mb-4">
@@ -78,19 +78,6 @@ const Adopt = ({ Adopt }) => {
                 name="contact_email"
                 className="border rounded w-full py-2 px-3"
                 placeholder="Email address for applicants"
-                required
-                value={contactEmail}
-                onChange={(e) => setContactEmail(e.target.value)}
-                />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="pet_id" className="block text-gray-700 font-bold mb-2">Pet ID</label>
-              <input
-                type="id"
-                id="pet_id"
-                name="pet_id"
-                className="border rounded w-full py-2 px-3"
-                placeholder="Desired Pet ID"
                 required
                 value={contactEmail}
                 onChange={(e) => setContactEmail(e.target.value)}
