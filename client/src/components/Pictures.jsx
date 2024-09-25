@@ -1,4 +1,3 @@
-
 import puppy from '../assets/images/puppy.jpg'
 import cat from '../assets/images/cat.jpg'
 import { Link } from 'react-router-dom'
@@ -32,4 +31,3 @@ const Pictures = () => {
 }
 
 export default Pictures
-
