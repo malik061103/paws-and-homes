@@ -4,9 +4,10 @@ const Adopt = ({ Adopt }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [type, setType] = useState('Dog');
-  const [description, setDescription] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
   const [contactPhone, setContactPhone] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [petId, setPetId] = useState('');
+  const [description, setDescription] = useState('');
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -81,6 +82,19 @@ const Adopt = ({ Adopt }) => {
                 required
                 value={contactEmail}
                 onChange={(e) => setContactEmail(e.target.value)}
+                />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="contact_email" className="block text-gray-700 font-bold mb-2">Contact Email</label>
+              <input
+                type="id"
+                id="pet_id"
+                name="pet_id"
+                className="border rounded w-full py-2 px-3"
+                placeholder="Desired Pet Id"
+                required
+                value={petId}
+                onChange={(e) => setPetId(e.target.value)}
                 />
             </div>
 
