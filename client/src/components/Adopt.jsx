@@ -9,7 +9,7 @@ const Adopt = ({ Adopt }) => {
   const [petId, setPetId] = useState('');
 
   const [contactEmail, setContactEmail] = useState('');
-  const [petId, setPetId] = useState('');
+  
   const [description, setDescription] = useState('');
 
 
